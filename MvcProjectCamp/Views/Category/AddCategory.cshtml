@@ -13,12 +13,25 @@
 </head>
 <body>
     <div> 
-        <h1>New Category Add Page</h1>
+        <form class="form-group" action="/Category/AddCategory" method="post">
+            <label class="label">Category Name</label>
+            <input type="text" placeholder="Category Name" name="CategoryName" class="form-control" />
+            <span class="field-validation-error text-danger" data-valmsg-for="CategoryName" data-valmsg-replace="true">
+                The CategoryName field is required.
+            </span>
+            <label class="label">Category Description</label>
+            <input type="text" placeholder="Category Description" name="CategoryDescription" class="form-control" />
+            <span class="field-validation-error text-danger" data-valmsg-for="CategoryDescription" data-valmsg-replace="true">
+                The Category Description field is required.
+            </span>
+            <button class="btn btn-primary">Add</button>
+        </form>
+        @*<h1>New Category Add Page</h1>
         <form class="form-group" method="post">
             <input type="text" placeholder="Category Name" name="CategoryName" class="form-control" />
             <input type="text" placeholder="Category Description" name="CategoryDescription" class="form-control" />
             <button class="btn btn-primary">Add</button>
-        </form>
+        </form>*@
     </div>
 </body>
 </html>

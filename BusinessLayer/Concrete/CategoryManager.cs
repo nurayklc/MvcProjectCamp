@@ -19,6 +19,11 @@ namespace BusinessLayer.Concrete
             this.categoryDAL = categoryDAL;
         }
 
+        public void AddCategory(Category category)
+        {
+            categoryDAL.Add(category);
+        }
+
         public List<Category> GetCategories()
         {
             return categoryDAL.GetAll();
