@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddCategory</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid p-2">
+        <form class="form-group" action="/AdminCategory/AddCategory" method="post">
+            <div class="p-2">
+                <label class="label text-black-50">Category Name</label>
+                <input type="text" placeholder="Category Name" name="CategoryName" class="form-control" />
+                <span class="field-validation-error text-danger" data-valmsg-for="CategoryName" data-valmsg-replace="true">
+                    The CategoryName field is required.
+                </span>
+            </div>
+            <div class="p-2">
+                <label class="label text-black-50">Category Description</label>
+                <input type="text" placeholder="Category Description" name="CategoryDescription" class="form-control" />
+                <span class="field-validation-error text-danger" data-valmsg-for="CategoryDescription" data-valmsg-replace="true">
+                    The Category Description field is required.
+                </span>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-primary">Add</button>
+            </div>
+        </form>
+        @*<h1>New Category Add Page</h1>
+            <form class="form-group" method="post">
+                <input type="text" placeholder="Category Name" name="CategoryName" class="form-control" />
+                <input type="text" placeholder="Category Description" name="CategoryDescription" class="form-control" />
+                <button class="btn btn-primary">Add</button>
+            </form>*@
+    </div>
+</body>
+</html>
