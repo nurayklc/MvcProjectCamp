@@ -46,5 +46,12 @@ namespace MvcProjectCamp.Controllers
             }
             return View();
         }
+
+        public ActionResult DeleteCategory(int id)
+        {
+            var category = categorManager.GetCategory(id);
+            categorManager.DeleteCategory(category);
+            return View();
+        }
     }
 }

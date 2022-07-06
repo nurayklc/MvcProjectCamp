@@ -37,6 +37,11 @@ namespace DataAccessLayer.Concrete.Repositories
             return _object.ToList();
         }
 
+        public T GetById(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter);
+        }
+
         public List<T> GetFilterList(Expression<Func<T, bool>> filter)
         {
             return _object.Where(filter).ToList();
