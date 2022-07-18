@@ -139,6 +139,7 @@
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StaticsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2275,6 +2276,8 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\AdminCategory\Index.cshtml" />
     <Content Include="Views\AdminCategory\AddCategory.cshtml" />
+    <Content Include="Views\AdminCategory\UpdateCategory.cshtml" />
+    <Content Include="Views\Statics\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

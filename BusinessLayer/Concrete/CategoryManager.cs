@@ -24,11 +24,6 @@ namespace BusinessLayer.Concrete
             categoryDAL.Add(category);
         }
 
-        public void DeleteCategory(Category category)
-        {
-            categoryDAL.Delete(category);
-        }
-
         public List<Category> GetCategories()
         {
             return categoryDAL.GetAll();
@@ -37,6 +32,14 @@ namespace BusinessLayer.Concrete
         public Category GetCategoryById(int id)
         {
             return categoryDAL.GetById(x => x.CategoryID == id);
+        }
+        public void UpdateCategory(Category category)
+        {
+            categoryDAL.Update(category);   
+        }
+        public void DeleteCategory(Category category)
+        {
+            categoryDAL.Delete(category);
         }
     }
 }
