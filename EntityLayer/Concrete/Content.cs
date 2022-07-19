@@ -16,7 +16,7 @@ namespace EntityLayer.Concrete
         public DateTime ContentDate { get; set; }
         public int HeadingID { get; set; }
         public virtual Heading Heading { get; set; }
-        public int AuthorID { get; set; }
+        public int? AuthorID { get; set; }
         public virtual Author Author { get; set; }
     }
 }
