@@ -21,6 +21,8 @@ namespace EntityLayer.Concrete
         public string AuthorMail { get; set; }
         [StringLength(20)]
         public string AuthorPassword { get; set; }
+        [StringLength(200)]
+        public string AuthorAbout { get; set; }
         public ICollection<Heading> Headings { get; set; }
         public ICollection<Content> Contents { get; set; }
     }

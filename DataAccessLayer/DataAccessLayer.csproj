@@ -61,10 +61,15 @@
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
+    <Compile Include="EntityFramework\EFAuthorDAL.cs" />
     <Compile Include="EntityFramework\EFCategoryDAL.cs" />
     <Compile Include="Migrations\202207190711538_Tables-Update-V1.cs" />
     <Compile Include="Migrations\202207190711538_Tables-Update-V1.designer.cs">
       <DependentUpon>202207190711538_Tables-Update-V1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207191129011_Author-About.cs" />
+    <Compile Include="Migrations\202207191129011_Author-About.designer.cs">
+      <DependentUpon>202207191129011_Author-About.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,6 +87,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202207190711538_Tables-Update-V1.resx">
       <DependentUpon>202207190711538_Tables-Update-V1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207191129011_Author-About.resx">
+      <DependentUpon>202207191129011_Author-About.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
