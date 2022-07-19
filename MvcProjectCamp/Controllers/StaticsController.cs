@@ -16,7 +16,7 @@ namespace MvcProjectCamp.Controllers
             var totalCategory = context.Categories.Count();
             ViewBag.TotalCategory = totalCategory;
 
-            var subTitleCategory = context.Headings.Where(x => x.CategoryID == 17).Count();
+            var subTitleCategory = context.Headings.Where(x => x.CategoryID == 18).Count();
             ViewBag.SubTitleCategory = subTitleCategory;
 
             var indexOfCharWithAuthor = context.Authors.Count(x => x.AuthorName.Contains("a"));
