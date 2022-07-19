@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "AddAuthor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>New Add Author</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid p-2">
+        <form class="form-group" action="/Author/AddAuthor" method="post">
+            <div class="p-2">
+                <label class="label text-black-50">Author Name</label>
+                <input type="text" placeholder="Author Name" name="AuthorName" class="form-control" />
+            </div>
+            <div class="p-2">
+                <label class="label text-black-50">Author Surname</label>
+                <input type="text" placeholder="Author Surname" name="AuthorSurname" class="form-control" />
+            </div>
+            @*<div class="p-2">
+            <label class="label text-black-50">Author Image</label>
+            <input type="text" placeholder="Author Surname" name="AuthorSurname" class="form-control" />
+        </div>*@
+            <div class="p-2">
+                <label class="label text-black-50">Author Mail</label>
+                <input type="email" placeholder="Author Mail" name="AuthorMail" class="form-control" />
+            </div>
+            <div class="p-2">
+                <label class="label text-black-50">Author Password</label>
+                <input type="password" placeholder="Author Password" name="AuthorPassword" class="form-control" />
+            </div>
+            <div class="p-2">
+                <label class="label text-black-50">Author About</label>
+                <textarea placeholder="Author About" name="AuthorAbout" class="form-control" ></textarea>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-primary">Add</button>
+            </div>
+        </form>
+        @*<h1>New Category Add Page</h1>
+            <form class="form-group" method="post">
+                <input type="text" placeholder="Category Name" name="CategoryName" class="form-control" />
+                <input type="text" placeholder="Category Description" name="CategoryDescription" class="form-control" />
+                <button class="btn btn-primary">Add</button>
+            </form>*@
+    </div>
+</body>
+</html>
