@@ -45,5 +45,17 @@ namespace MvcProjectCamp.Controllers
             }
             return View();
         }
+        [HttpGet]
+        public ActionResult UpdateAuthor(int id)
+        {
+            var author = authorManager.GetAuthor(id);
+            return View(author);
+        }
+        [HttpPost]
+        public ActionResult UpdateAuthor(Author author)
+        {
+            authorManager.UpdateAuthor(author);
+            return RedirectToAction("Index");
+        }
     }
 }
