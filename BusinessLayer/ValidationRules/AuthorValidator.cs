@@ -12,9 +12,10 @@ namespace BusinessLayer.ValidationRules
     {
         public AuthorValidator()
         {
-            RuleFor(x => x.AuthorName).NotEmpty().MinimumLength(2).MaximumLength(50).WithMessage("Author Name Not Empty!");
-            RuleFor(x => x.AuthorSurname).NotEmpty().MinimumLength(2).MaximumLength(50).WithMessage("Author Surname Not Empty !");
-            RuleFor(x => x.AuthorAbout).NotEmpty().MinimumLength(2).MaximumLength(50).WithMessage("author About Not Empty!");
+            RuleFor(x => x.AuthorName).NotEmpty().WithMessage("Author Name Not Empty!").MinimumLength(2).MaximumLength(50);
+            RuleFor(x => x.AuthorSurname).NotEmpty().WithMessage("Author Surname Not Empty !").MinimumLength(2).MaximumLength(50);
+            RuleFor(x => x.AuthorAbout).NotEmpty().WithMessage("Author About Not Empty!").MinimumLength(2).MaximumLength(200);
+            RuleFor(x => x.AuthorTitle).NotEmpty().WithMessage("Author Title Not Empty!").MinimumLength(2).MaximumLength(50);
         }   
     }
 }
