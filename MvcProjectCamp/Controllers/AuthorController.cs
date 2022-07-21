@@ -16,6 +16,8 @@ namespace MvcProjectCamp.Controllers
         // GET: Author
 
         AuthorManager authorManager = new AuthorManager(new EFAuthorDAL());
+        AuthorValidator authorValidation = new AuthorValidator();
+
         public ActionResult Index()
         {
             var AuthorValues = authorManager.GetAuthorList();
@@ -29,7 +31,6 @@ namespace MvcProjectCamp.Controllers
         [HttpPost]
         public ActionResult AddAuthor(Author author)
         {
-            AuthorValidator authorValidation = new AuthorValidator();
             ValidationResult validationResults = authorValidation.Validate(author);
             if (validationResults.IsValid)
             {
@@ -54,8 +55,20 @@ namespace MvcProjectCamp.Controllers
         [HttpPost]
         public ActionResult UpdateAuthor(Author author)
         {
-            authorManager.UpdateAuthor(author);
-            return RedirectToAction("Index");
+            ValidationResult validationResults = authorValidation.Validate(author);
+            if (validationResults.IsValid)
+            {
+                authorManager.UpdateAuthor(author);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in validationResults.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
     }
 }
