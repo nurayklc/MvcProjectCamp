@@ -71,6 +71,10 @@
     <Compile Include="Migrations\202207191129011_Author-About.designer.cs">
       <DependentUpon>202207191129011_Author-About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207211404503_add-author-title.cs" />
+    <Compile Include="Migrations\202207211404503_add-author-title.designer.cs">
+      <DependentUpon>202207211404503_add-author-title.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -90,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202207191129011_Author-About.resx">
       <DependentUpon>202207191129011_Author-About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207211404503_add-author-title.resx">
+      <DependentUpon>202207211404503_add-author-title.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
