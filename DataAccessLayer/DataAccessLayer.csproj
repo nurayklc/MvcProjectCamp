@@ -63,6 +63,7 @@
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="EntityFramework\EFAuthorDAL.cs" />
     <Compile Include="EntityFramework\EFCategoryDAL.cs" />
+    <Compile Include="EntityFramework\EFHeadingDAL.cs" />
     <Compile Include="Migrations\202207190711538_Tables-Update-V1.cs" />
     <Compile Include="Migrations\202207190711538_Tables-Update-V1.designer.cs">
       <DependentUpon>202207190711538_Tables-Update-V1.cs</DependentUpon>
