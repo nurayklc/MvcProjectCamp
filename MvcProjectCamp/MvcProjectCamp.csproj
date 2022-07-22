@@ -2284,6 +2284,7 @@
     <Content Include="Views\Author\AddAuthor.cshtml" />
     <Content Include="Views\Author\UpdateAuthor.cshtml" />
     <Content Include="Views\Heading\Index.cshtml" />
+    <Content Include="Views\Heading\AddHeading.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

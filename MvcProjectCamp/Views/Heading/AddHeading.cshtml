@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "AddHeading";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>New Add Heading</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid p-2">
+        <form class="form-group" action="/Heading/AddHeading" method="post">
+            <div class="p-2">
+                <label class="label text-black-50">Heading Name</label>
+                <input type="text" placeholder="Heading Name" name="AuthorName" class="form-control" />
+            </div>
+            <div class="p-2">
+                <label class="label text-black-50">Category</label>
+                <input type="text" placeholder="Category" name="CategoryID" class="form-control" />
+            </div>
+            <div class="p-2">
+                <label class="label text-black-50">Author</label>
+                <input type="email" placeholder="Author" name="AuthorID" class="form-control" />
+            </div>
+            <div class="p-2">
+                <button class="btn btn-primary">Add</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
