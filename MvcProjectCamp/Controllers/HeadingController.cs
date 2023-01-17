@@ -26,6 +26,7 @@ namespace MvcProjectCamp.Controllers
         [HttpPost]
         public ActionResult AddHeading(Heading heading)
         {
+            heading.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             headingManager.AddHeading(heading);
             return RedirectToAction("Index");
         }
