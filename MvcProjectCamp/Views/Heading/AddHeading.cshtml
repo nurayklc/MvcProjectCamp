@@ -21,11 +21,21 @@
             </div>
             <div class="p-2">
                 <label class="label text-black-50">Category</label>
-                <input type="text" placeholder="Category" name="CategoryID" class="form-control" />
+                <select name="categories">
+                    @foreach (var item in ViewBag.valueCategory)
+                    {
+                        <option class="form-control" value="@item.Value">@item.Text</option>
+                    }
+                </select>
             </div>
             <div class="p-2">
                 <label class="label text-black-50">Author</label>
-                <input type="text" placeholder="Author" name="AuthorID" class="form-control" />
+                <select name="authorList">
+                    @foreach (var item in ViewBag.valueAuthor)
+                    {
+                        <option class="form-control" value="@item.Value">@item.Text</option>
+                    }
+                </select>
             </div>
             <div class="p-2">
                 <button class="btn btn-primary">Add</button>

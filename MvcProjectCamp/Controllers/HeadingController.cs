@@ -13,6 +13,8 @@ namespace MvcProjectCamp.Controllers
     {
         // GET: Heading
         HeadingManager headingManager = new HeadingManager(new EFHeadingDAL());
+        CategoryManager categoryManager = new CategoryManager(new EFCategoryDAL());
+        AuthorManager authorManager = new AuthorManager(new EFAuthorDAL());
         public ActionResult Index()
         {
             var headingResult = headingManager.GetHeadings();
@@ -21,8 +23,23 @@ namespace MvcProjectCamp.Controllers
         [HttpGet]
         public ActionResult AddHeading()
         {
+            List<SelectListItem> valueCategory = (from category in categoryManager.GetCategories()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = category.CategoryName,
+                                                      Value = category.CategoryID.ToString()
+                                                  }).ToList();
+            List<SelectListItem> valueAuthor = (from author in authorManager.GetAuthorList()
+                                                select new SelectListItem
+                                                {
+                                                    Text = author.AuthorName + " " + author.AuthorSurname,
+                                                    Value = author.AuthorID.ToString()
+                                                }).ToList();
+            ViewBag.ValueCategory = valueCategory;
+            ViewBag.ValueAuthor = valueAuthor;
             return View();
         }
+
         [HttpPost]
         public ActionResult AddHeading(Heading heading)
         {
