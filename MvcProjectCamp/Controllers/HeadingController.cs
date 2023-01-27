@@ -47,5 +47,6 @@ namespace MvcProjectCamp.Controllers
             headingManager.AddHeading(heading);
             return RedirectToAction("Index");
         }
+
     }
 }

@@ -81,6 +81,10 @@
     <Compile Include="Migrations\202301271007226_imagesize-update.designer.cs">
       <DependentUpon>202301271007226_imagesize-update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301271049083_update-author.cs" />
+    <Compile Include="Migrations\202301271049083_update-author.designer.cs">
+      <DependentUpon>202301271049083_update-author.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -106,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301271007226_imagesize-update.resx">
       <DependentUpon>202301271007226_imagesize-update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301271049083_update-author.resx">
+      <DependentUpon>202301271049083_update-author.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
